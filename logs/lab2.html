@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- This file was created with the aha Ansi HTML Adapter. https://github.com/theZiz/aha -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8"/>
+<title>stdin</title>
+</head>
+<body style="color:white; background-color:black">
+<pre>
+Script started on 2025-02-01 16:38:26+05:30 [TERM=&quot;xterm-256color&quot; TTY=&quot;/dev/pts/0&quot; COLUMNS=&quot;112&quot; LINES=&quot;24&quot;]
+<span style="font-weight:bold;color:lime;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~</span>$ ds5102
+
+(DS5102) <span style="font-weight:bold;color:lime;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~</span>$ cd Lab2/
+
+(DS5102) <span style="font-weight:bold;color:lime;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ hmk /lab2
+
+(DS5102) <span style="font-weight:bold;color:lime;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ hcp /estimate_pi.txt /lab2/estimate_pi.txt
+
+(DS5102) <span style="font-weight:bold;color:lime;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ hmk /lab2/ml-100k
+
+(DS5102) <span style="font-weight:bold;color:lime;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ hcp ml-100k/ * /lab2/ml-100k/
+
+(DS5102) <span style="font-weight:bold;color:lime;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ hcp mm.json /lab2/
+
+(DS5102) <span style="font-weight:bold;color:lime;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">echo &quot;Task1: Estimate PI&quot;</span>
+
+Task1: Estimate PI
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">python estimate_pi.py -r hadoop hdfs:///lab2/estimate_pi.txt -o /lab2/q1</span><span style="color:white;background-color:black;"></span>
+
+No configs found; falling back on auto-configuration
+No configs specified for hadoop runner
+Looking for hadoop binary in /home/hadoop/hadoop/bin...
+Found hadoop binary: /home/hadoop/hadoop/bin/hadoop
+Using Hadoop version 2.7.0
+Looking for Hadoop streaming jar in /home/hadoop/hadoop...
+Found Hadoop streaming jar: /home/hadoop/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.0.jar
+Creating temp directory /tmp/estimate_pi.hadoop.20250201.110843.350506
+uploading working dir files to hdfs:///user/hadoop/tmp/mrjob/estimate_pi.hadoop.20250201.110843.350506/files/wd...
+Copying other local files to hdfs:///user/hadoop/tmp/mrjob/estimate_pi.hadoop.20250201.110843.350506/files/
+Running step 1 of 1...
+  packageJobJar: [/tmp/hadoop-unjar487556326993834101/] [] /tmp/streamjob1207096814593745466.jar tmpDir=null
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Total input paths to process : 1
+  number of splits:2
+  Submitting tokens for job: job_1738404752586_0028
+  Submitted application application_1738404752586_0028
+  The url to track the job: http://machine1:8088/proxy/application_1738404752586_0028/
+  Running job: job_1738404752586_0028
+  Job job_1738404752586_0028 running in uber mode : false
+   map 0% reduce 0%
+   map 100% reduce 0%
+   map 100% reduce 100%
+  Job job_1738404752586_0028 completed successfully
+  Output directory: hdfs:///lab2/q1
+Counters: 51
+	File Input Format Counters 
+		Bytes Read=3856031
+	File Output Format Counters 
+		Bytes Written=75
+	File System Counters
+		FILE: Number of bytes read=6256037
+		FILE: Number of bytes written=5155445
+		FILE: Number of large read operations=0
+		FILE: Number of read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=180
+		HDFS: Number of bytes written=75
+		HDFS: Number of large read operations=0
+		HDFS: Number of read operations=7
+		HDFS: Number of write operations=2
+	Job Counters 
+		Failed map tasks=1
+		Launched map tasks=3
+		Launched reduce tasks=1
+		Other local map tasks=1
+		Rack-local map tasks=2
+		Total megabyte-seconds taken by all map tasks=8381440
+		Total megabyte-seconds taken by all reduce tasks=3241984
+		Total time spent by all map tasks (ms)=8185
+		Total time spent by all maps in occupied slots (ms)=8185
+		Total time spent by all reduce tasks (ms)=3166
+		Total time spent by all reduces in occupied slots (ms)=3166
+		Total vcore-seconds taken by all map tasks=8185
+		Total vcore-seconds taken by all reduce tasks=3166
+	Map-Reduce Framework
+		CPU time spent (ms)=2940
+		Combine input records=0
+		Combine output records=0
+		Failed Shuffles=0
+		GC time elapsed (ms)=169
+		Input split bytes=180
+		Map input records=100000
+		Map output bytes=2200000
+		Map output materialized bytes=2400012
+		Map output records=100000
+		Merged Map outputs=2
+		Physical memory (bytes) snapshot=716435456
+		Reduce input groups=1
+		Reduce input records=100000
+		Reduce output records=1
+		Reduce shuffle bytes=2400012
+		Shuffled Maps =2
+		Spilled Records=200000
+		Total committed heap usage (bytes)=512229376
+		Virtual memory (bytes) snapshot=5568733184
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+job output is in hdfs:///lab2/q1
+Removing HDFS temp directory hdfs:///user/hadoop/tmp/mrjob/estimate_pi.hadoop.20250201.110843.350506...
+Removing temp directory /tmp/estimate_pi.hadoop.20250201.110843.350506...
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">hcat /lab2/q1/*</span><span style="color:white;background-color:black;">
+
+&quot;PI&quot;	{&quot;pi_estimate&quot;: 3.14, &quot;points_inside&quot;: 78466, &quot;total_points&quot;: 100000}
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">echo &quot;Task2: Movie Rating Analysis&quot;</span><span style="color:white;background-color:black;">
+
+Task2: Movie Rating Analysis
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">python ratings.py -r hadoop hdfs://lab2/ml-100k/u.data -o /lab2/q2_1</span><span style="color:white;background-color:black;">
+
+No configs found; falling back on auto-configuration
+No configs specified for hadoop runner
+Looking for hadoop binary in /home/hadoop/hadoop/bin...
+Found hadoop binary: /home/hadoop/hadoop/bin/hadoop
+Using Hadoop version 2.7.0
+Looking for Hadoop streaming jar in /home/hadoop/hadoop...
+Found Hadoop streaming jar: /home/hadoop/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.0.jar
+Creating temp directory /tmp/ratings.hadoop.20250201.110944.352996
+uploading working dir files to hdfs:///user/hadoop/tmp/mrjob/ratings.hadoop.20250201.110944.352996/files/wd...
+Copying other local files to hdfs:///user/hadoop/tmp/mrjob/ratings.hadoop.20250201.110944.352996/files/
+Running step 1 of 1...
+  packageJobJar: [/tmp/hadoop-unjar4780356309188064932/] [] /tmp/streamjob6078932718351586155.jar tmpDir=null
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Total input paths to process : 1
+  number of splits:2
+  Submitting tokens for job: job_1738404752586_0029
+  Submitted application application_1738404752586_0029
+  The url to track the job: http://machine1:8088/proxy/application_1738404752586_0029/
+  Running job: job_1738404752586_0029
+  Job job_1738404752586_0029 running in uber mode : false
+   map 0% reduce 0%
+   map 100% reduce 0%
+   map 100% reduce 100%
+  Job job_1738404752586_0029 completed successfully
+  Output directory: hdfs:///lab2/q2_1
+Counters: 51
+	File Input Format Counters 
+		Bytes Read=1980819
+	File Output Format Counters 
+		Bytes Written=49
+	File System Counters
+		FILE: Number of bytes read=2780825
+		FILE: Number of bytes written=1955292
+		FILE: Number of large read operations=0
+		FILE: Number of read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=178
+		HDFS: Number of bytes written=49
+		HDFS: Number of large read operations=0
+		HDFS: Number of read operations=7
+		HDFS: Number of write operations=2
+	Job Counters 
+		Failed map tasks=1
+		Launched map tasks=3
+		Launched reduce tasks=1
+		Other local map tasks=1
+		Rack-local map tasks=2
+		Total megabyte-seconds taken by all map tasks=8120320
+		Total megabyte-seconds taken by all reduce tasks=2893824
+		Total time spent by all map tasks (ms)=7930
+		Total time spent by all maps in occupied slots (ms)=7930
+		Total time spent by all reduce tasks (ms)=2826
+		Total time spent by all reduces in occupied slots (ms)=2826
+		Total vcore-seconds taken by all map tasks=7930
+		Total vcore-seconds taken by all reduce tasks=2826
+	Map-Reduce Framework
+		CPU time spent (ms)=2660
+		Combine input records=0
+		Combine output records=0
+		Failed Shuffles=0
+		GC time elapsed (ms)=177
+		Input split bytes=178
+		Map input records=100000
+		Map output bytes=600000
+		Map output materialized bytes=800012
+		Map output records=100000
+		Merged Map outputs=2
+		Physical memory (bytes) snapshot=710623232
+		Reduce input groups=5
+		Reduce input records=100000
+		Reduce output records=5
+		Reduce shuffle bytes=800012
+		Shuffled Maps =2
+		Spilled Records=200000
+		Total committed heap usage (bytes)=510132224
+		Virtual memory (bytes) snapshot=5573828608
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+job output is in hdfs:///lab2/q2_1
+Removing HDFS temp directory hdfs:///user/hadoop/tmp/mrjob/ratings.hadoop.20250201.110944.352996...
+Removing temp directory /tmp/ratings.hadoop.20250201.110944.352996...
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">hcat /lab2/q2_1/*</span><span style="color:white;background-color:black;">
+
+&quot;1&quot;	6110
+&quot;2&quot;	11370
+&quot;3&quot;	27145
+&quot;4&quot;	34174
+&quot;5&quot;	21201
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">python ratings_count.py -r hadoop hdfs://lab2/ml-100k/u.data -o /lab2/q2_2</span><span style="color:white;background-color:black;">
+
+No configs found; falling back on auto-configuration
+No configs specified for hadoop runner
+Looking for hadoop binary in /home/hadoop/hadoop/bin...
+Found hadoop binary: /home/hadoop/hadoop/bin/hadoop
+Using Hadoop version 2.7.0
+Looking for Hadoop streaming jar in /home/hadoop/hadoop...
+Found Hadoop streaming jar: /home/hadoop/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.0.jar
+Creating temp directory /tmp/ratings_count.hadoop.20250201.111036.442696
+uploading working dir files to hdfs:///user/hadoop/tmp/mrjob/ratings_count.hadoop.20250201.111036.442696/files/wd...
+Copying other local files to hdfs:///user/hadoop/tmp/mrjob/ratings_count.hadoop.20250201.111036.442696/files/
+Running step 1 of 1...
+  packageJobJar: [/tmp/hadoop-unjar6978552593733637191/] [] /tmp/streamjob5590384661178589051.jar tmpDir=null
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Total input paths to process : 1
+  number of splits:2
+  Submitting tokens for job: job_1738404752586_0030
+  Submitted application application_1738404752586_0030
+  The url to track the job: http://machine1:8088/proxy/application_1738404752586_0030/
+  Running job: job_1738404752586_0030
+  Job job_1738404752586_0030 running in uber mode : false
+   map 0% reduce 0%
+   map 50% reduce 0%
+
+   Task Id : attempt_1738404752586_0030_r_000000_1, Status : FAILED
+Error: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 1
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:322)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:535)
+	at org.apache.hadoop.streaming.PipeReducer.close(PipeReducer.java:134)
+	at org.apache.hadoop.io.IOUtils.cleanup(IOUtils.java:244)
+	at org.apache.hadoop.mapred.ReduceTask.runOldReducer(ReduceTask.java:459)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:392)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:163)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:158)
+
+   map 100% reduce 0%
+   map 100% reduce 100%
+  Job job_1738404752586_0030 completed successfully
+  Output directory: hdfs:///lab2/q2_2
+Counters: 52
+	File Input Format Counters 
+		Bytes Read=1980819
+	File Output Format Counters 
+		Bytes Written=8743
+	File System Counters
+		FILE: Number of bytes read=2968583
+		FILE: Number of bytes written=2331042
+		FILE: Number of large read operations=0
+		FILE: Number of read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=178
+		HDFS: Number of bytes written=8743
+		HDFS: Number of large read operations=0
+		HDFS: Number of read operations=7
+		HDFS: Number of write operations=2
+	Job Counters 
+		Failed map tasks=3
+		Failed reduce tasks=3
+		Launched map tasks=5
+		Launched reduce tasks=4
+		Other local map tasks=3
+		Rack-local map tasks=2
+		Total megabyte-seconds taken by all map tasks=14062592
+		Total megabyte-seconds taken by all reduce tasks=20251648
+		Total time spent by all map tasks (ms)=13733
+		Total time spent by all maps in occupied slots (ms)=13733
+		Total time spent by all reduce tasks (ms)=19777
+		Total time spent by all reduces in occupied slots (ms)=19777
+		Total vcore-seconds taken by all map tasks=13733
+		Total vcore-seconds taken by all reduce tasks=19777
+	Map-Reduce Framework
+		CPU time spent (ms)=3550
+		Combine input records=0
+		Combine output records=0
+		Failed Shuffles=0
+		GC time elapsed (ms)=193
+		Input split bytes=178
+		Map input records=100000
+		Map output bytes=787758
+		Map output materialized bytes=987770
+		Map output records=100000
+		Merged Map outputs=2
+		Physical memory (bytes) snapshot=716689408
+		Reduce input groups=943
+		Reduce input records=100000
+		Reduce output records=943
+		Reduce shuffle bytes=987770
+		Shuffled Maps =2
+		Spilled Records=200000
+		Total committed heap usage (bytes)=499122176
+		Virtual memory (bytes) snapshot=5579526144
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+job output is in hdfs:///lab2/q2_2
+Removing HDFS temp directory hdfs:///user/hadoop/tmp/mrjob/ratings_count.hadoop.20250201.111036.442696...
+Removing temp directory /tmp/ratings_count.hadoop.20250201.111036.442696...
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">hcat /lab2/q2_2/* | head -n 10</span><span style="color:white;background-color:black;">
+
+&quot;1&quot;	272
+&quot;10&quot;	184
+&quot;100&quot;	59
+&quot;101&quot;	67
+&quot;102&quot;	216
+&quot;103&quot;	29
+&quot;104&quot;	111
+&quot;105&quot;	23
+&quot;106&quot;	64
+&quot;107&quot;	22
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ python ratings_avg.py -r hadoop file:///home/hadoop/Lab2/ml-100k/u.data -o /lab2/q2_31
+
+No configs found; falling back on auto-configuration
+No configs specified for hadoop runner
+Looking for hadoop binary in /home/hadoop/hadoop/bin...
+Found hadoop binary: /home/hadoop/hadoop/bin/hadoop
+Using Hadoop version 2.7.0
+Looking for Hadoop streaming jar in /home/hadoop/hadoop...
+Found Hadoop streaming jar: /home/hadoop/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.0.jar
+Creating temp directory /tmp/ratings_avg.hadoop.20250201.111622.620980
+uploading working dir files to hdfs:///user/hadoop/tmp/mrjob/ratings_avg.hadoop.20250201.111622.620980/files/wd...
+Copying other local files to hdfs:///user/hadoop/tmp/mrjob/ratings_avg.hadoop.20250201.111622.620980/files/
+Running step 1 of 1...
+  packageJobJar: [/tmp/hadoop-unjar7090121939152366197/] [] /tmp/streamjob6708981441206949359.jar tmpDir=null
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Total input paths to process : 1
+  number of splits:2
+  Submitting tokens for job: job_1738404752586_0032
+  Submitted application application_1738404752586_0032
+  The url to track the job: http://machine1:8088/proxy/application_1738404752586_0032/
+  Running job: job_1738404752586_0032
+  Job job_1738404752586_0032 running in uber mode : false
+   map 0% reduce 0%
+   map 50% reduce 0%
+  Task Id : attempt_1738404752586_0032_m_000001_0, Status : FAILED
+Error: java.io.FileNotFoundException: File file:/home/hadoop/Lab2/ml-100k/u.data does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:606)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:819)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:596)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:421)
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.&lt;init&gt;(ChecksumFileSystem.java:140)
+	at org.apache.hadoop.fs.ChecksumFileSystem.open(ChecksumFileSystem.java:341)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:767)
+	at org.apache.hadoop.mapred.LineRecordReader.&lt;init&gt;(LineRecordReader.java:108)
+	at org.apache.hadoop.mapred.TextInputFormat.getRecordReader(TextInputFormat.java:67)
+	at org.apache.hadoop.mapred.MapTask$TrackedRecordReader.&lt;init&gt;(MapTask.java:169)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:432)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:343)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:163)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:158)
+
+   map 100% reduce 0%
+   map 100% reduce 100%
+  Job job_1738404752586_0032 completed successfully
+  Output directory: hdfs:///lab2/q2_31
+Counters: 51
+	File Input Format Counters 
+		Bytes Read=1980819
+	File Output Format Counters 
+		Bytes Written=21919
+	File System Counters
+		FILE: Number of bytes read=3672240
+		FILE: Number of bytes written=3738281
+		FILE: Number of large read operations=0
+		FILE: Number of read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=178
+		HDFS: Number of bytes written=21919
+		HDFS: Number of large read operations=0
+		HDFS: Number of read operations=7
+		HDFS: Number of write operations=2
+	Job Counters 
+		Failed map tasks=1
+		Launched map tasks=3
+		Launched reduce tasks=1
+		Other local map tasks=1
+		Rack-local map tasks=2
+		Total megabyte-seconds taken by all map tasks=8253440
+		Total megabyte-seconds taken by all reduce tasks=3101696
+		Total time spent by all map tasks (ms)=8060
+		Total time spent by all maps in occupied slots (ms)=8060
+		Total time spent by all reduce tasks (ms)=3029
+		Total time spent by all reduces in occupied slots (ms)=3029
+		Total vcore-seconds taken by all map tasks=8060
+		Total vcore-seconds taken by all reduce tasks=3029
+	Map-Reduce Framework
+		CPU time spent (ms)=3120
+		Combine input records=0
+		Combine output records=0
+		Failed Shuffles=0
+		GC time elapsed (ms)=158
+		Input split bytes=178
+		Map input records=100000
+		Map output bytes=1491415
+		Map output materialized bytes=1691427
+		Map output records=100000
+		Merged Map outputs=2
+		Physical memory (bytes) snapshot=721682432
+		Reduce input groups=1682
+		Reduce input records=100000
+		Reduce output records=1682
+		Reduce shuffle bytes=1691427
+		Shuffled Maps =2
+		Spilled Records=200000
+		Total committed heap usage (bytes)=511705088
+		Virtual memory (bytes) snapshot=5570691072
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+job output is in hdfs:///lab2/q2_31
+Removing HDFS temp directory hdfs:///user/hadoop/tmp/mrjob/ratings_avg.hadoop.20250201.111622.620980...
+Removing temp directory /tmp/ratings_avg.hadoop.20250201.111622.620980...
+(DS5102) <span style="font-weight:bold;color:lime;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">hcat /lab2/q2_31/* | head -n 10</span><span style="color:white;background-color:black;">
+
+&quot;1&quot;	3.87832
+&quot;10&quot;	3.83146
+&quot;100&quot;	4.15551
+&quot;1000&quot;	3.0
+&quot;1001&quot;	2.0
+&quot;1002&quot;	1.875
+&quot;1003&quot;	2.25
+&quot;1004&quot;	3.11111
+&quot;1005&quot;	3.68182
+&quot;1006&quot;	2.82609
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">echo &quot;Task3: Matrix Multiplication&quot;</span><span style="color:white;background-color:black;">
+
+Task3: Matrix Multiplication
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">python mm_2step.py -r hadoop hdfs://lab2/mm.json -o /lab2/q3_1</span><span style="color:white;background-color:black;">
+
+No configs found; falling back on auto-configuration
+No configs specified for hadoop runner
+Looking for hadoop binary in /home/hadoop/hadoop/bin...
+Found hadoop binary: /home/hadoop/hadoop/bin/hadoop
+Using Hadoop version 2.7.0
+Looking for Hadoop streaming jar in /home/hadoop/hadoop...
+Found Hadoop streaming jar: /home/hadoop/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.0.jar
+Creating temp directory /tmp/mm_2step.hadoop.20250201.112110.786003
+uploading working dir files to hdfs:///user/hadoop/tmp/mrjob/mm_2step.hadoop.20250201.112110.786003/files/wd...
+Copying other local files to hdfs:///user/hadoop/tmp/mrjob/mm_2step.hadoop.20250201.112110.786003/files/
+Running step 1 of 2...
+  packageJobJar: [/tmp/hadoop-unjar6575266541277402991/] [] /tmp/streamjob7609628767701779648.jar tmpDir=null
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Total input paths to process : 1
+  number of splits:2
+  Submitting tokens for job: job_1738404752586_0033
+  Submitted application application_1738404752586_0033
+  The url to track the job: http://machine1:8088/proxy/application_1738404752586_0033/
+  Running job: job_1738404752586_0033
+  Job job_1738404752586_0033 running in uber mode : false
+   map 0% reduce 0%
+   map 50% reduce 0%
+   map 100% reduce 0%
+   map 100% reduce 100%
+  Job job_1738404752586_0033 completed successfully
+  Output directory: hdfs:///user/hadoop/tmp/mrjob/mm_2step.hadoop.20250201.112110.786003/step-output/0000
+Counters: 51
+	File Input Format Counters 
+		Bytes Read=1028
+	File Output Format Counters 
+		Bytes Written=1367
+	File System Counters
+		FILE: Number of bytes read=1762
+		FILE: Number of bytes written=356970
+		FILE: Number of large read operations=0
+		FILE: Number of read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=164
+		HDFS: Number of bytes written=1367
+		HDFS: Number of large read operations=0
+		HDFS: Number of read operations=7
+		HDFS: Number of write operations=2
+	Job Counters 
+		Failed map tasks=1
+		Launched map tasks=3
+		Launched reduce tasks=1
+		Other local map tasks=1
+		Rack-local map tasks=2
+		Total megabyte-seconds taken by all map tasks=8114176
+		Total megabyte-seconds taken by all reduce tasks=3023872
+		Total time spent by all map tasks (ms)=7924
+		Total time spent by all maps in occupied slots (ms)=7924
+		Total time spent by all reduce tasks (ms)=2953
+		Total time spent by all reduces in occupied slots (ms)=2953
+		Total vcore-seconds taken by all map tasks=7924
+		Total vcore-seconds taken by all reduce tasks=2953
+	Map-Reduce Framework
+		CPU time spent (ms)=1690
+		Combine input records=0
+		Combine output records=0
+		Failed Shuffles=0
+		GC time elapsed (ms)=199
+		Input split bytes=164
+		Map input records=43
+		Map output bytes=642
+		Map output materialized bytes=740
+		Map output records=43
+		Merged Map outputs=2
+		Physical memory (bytes) snapshot=711434240
+		Reduce input groups=5
+		Reduce input records=43
+		Reduce output records=125
+		Reduce shuffle bytes=740
+		Shuffled Maps =2
+		Spilled Records=86
+		Total committed heap usage (bytes)=513277952
+		Virtual memory (bytes) snapshot=5574123520
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+Running step 2 of 2...
+  packageJobJar: [/tmp/hadoop-unjar8228120038197706255/] [] /tmp/streamjob3108336086885605539.jar tmpDir=null
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Total input paths to process : 1
+  number of splits:2
+  Submitting tokens for job: job_1738404752586_0034
+  Submitted application application_1738404752586_0034
+  The url to track the job: http://machine1:8088/proxy/application_1738404752586_0034/
+  Running job: job_1738404752586_0034
+  Job job_1738404752586_0034 running in uber mode : false
+   map 0% reduce 0%
+   map 100% reduce 0%
+   map 100% reduce 100%
+  Job job_1738404752586_0034 completed successfully
+  Output directory: hdfs:///lab2/q3_1
+Counters: 49
+	File Input Format Counters 
+		Bytes Read=2051
+	File Output Format Counters 
+		Bytes Written=311
+	File System Counters
+		FILE: Number of bytes read=1623
+		FILE: Number of bytes written=358484
+		FILE: Number of large read operations=0
+		FILE: Number of read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2373
+		HDFS: Number of bytes written=311
+		HDFS: Number of large read operations=0
+		HDFS: Number of read operations=9
+		HDFS: Number of write operations=2
+	Job Counters 
+		Data-local map tasks=2
+		Launched map tasks=2
+		Launched reduce tasks=1
+		Total megabyte-seconds taken by all map tasks=5734400
+		Total megabyte-seconds taken by all reduce tasks=2587648
+		Total time spent by all map tasks (ms)=5600
+		Total time spent by all maps in occupied slots (ms)=5600
+		Total time spent by all reduce tasks (ms)=2527
+		Total time spent by all reduces in occupied slots (ms)=2527
+		Total vcore-seconds taken by all map tasks=5600
+		Total vcore-seconds taken by all reduce tasks=2527
+	Map-Reduce Framework
+		CPU time spent (ms)=1730
+		Combine input records=0
+		Combine output records=0
+		Failed Shuffles=0
+		GC time elapsed (ms)=187
+		Input split bytes=322
+		Map input records=125
+		Map output bytes=1367
+		Map output materialized bytes=1629
+		Map output records=125
+		Merged Map outputs=2
+		Physical memory (bytes) snapshot=712617984
+		Reduce input groups=25
+		Reduce input records=125
+		Reduce output records=25
+		Reduce shuffle bytes=1629
+		Shuffled Maps =2
+		Spilled Records=250
+		Total committed heap usage (bytes)=511705088
+		Virtual memory (bytes) snapshot=5575200768
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+job output is in hdfs:///lab2/q3_1
+Removing HDFS temp directory hdfs:///user/hadoop/tmp/mrjob/mm_2step.hadoop.20250201.112110.786003...
+Removing temp directory /tmp/mm_2step.hadoop.20250201.112110.786003...
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">hcat /lab2/q3_1/*</span><span style="color:white;background-color:black;">
+
+[0, 0]	11878
+[0, 1]	14044
+[0, 2]	16031
+[0, 3]	5964
+[0, 4]	15874
+[1, 0]	4081
+[1, 1]	6914
+[1, 2]	8282
+[1, 3]	7479
+[1, 4]	9647
+[2, 0]	6844
+[2, 1]	9880
+[2, 2]	10636
+[2, 3]	6973
+[2, 4]	8873
+[3, 0]	10512
+[3, 1]	12037
+[3, 2]	10587
+[3, 3]	2934
+[3, 4]	5274
+[4, 0]	11182
+[4, 1]	14591
+[4, 2]	10954
+[4, 3]	1660
+[4, 4]	9981
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">python mm_1step.py -r hadoop hdfs://lab2/mm.json -o /lab2/q3_2</span><span style="color:white;background-color:black;">
+
+No configs found; falling back on auto-configuration
+No configs specified for hadoop runner
+Looking for hadoop binary in /home/hadoop/hadoop/bin...
+Found hadoop binary: /home/hadoop/hadoop/bin/hadoop
+Using Hadoop version 2.7.0
+Looking for Hadoop streaming jar in /home/hadoop/hadoop...
+Found Hadoop streaming jar: /home/hadoop/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.0.jar
+Creating temp directory /tmp/mm_1step.hadoop.20250201.112224.695881
+uploading working dir files to hdfs:///user/hadoop/tmp/mrjob/mm_1step.hadoop.20250201.112224.695881/files/wd...
+Copying other local files to hdfs:///user/hadoop/tmp/mrjob/mm_1step.hadoop.20250201.112224.695881/files/
+Running step 1 of 1...
+  packageJobJar: [/tmp/hadoop-unjar8464215429088462765/] [] /tmp/streamjob6984622245851690119.jar tmpDir=null
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Connecting to ResourceManager at machine1/10.0.2.15:9001
+  Total input paths to process : 1
+  number of splits:2
+  Submitting tokens for job: job_1738404752586_0035
+  Submitted application application_1738404752586_0035
+  The url to track the job: http://machine1:8088/proxy/application_1738404752586_0035/
+  Running job: job_1738404752586_0035
+  Job job_1738404752586_0035 running in uber mode : false
+   map 0% reduce 0%
+   map 50% reduce 0%
+   map 100% reduce 0%
+  Task Id : attempt_1738404752586_0035_r_000000_1, Status : FAILED
+Error: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 1
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:322)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:535)
+	at org.apache.hadoop.streaming.PipeReducer.close(PipeReducer.java:134)
+	at org.apache.hadoop.io.IOUtils.cleanup(IOUtils.java:244)
+	at org.apache.hadoop.mapred.ReduceTask.runOldReducer(ReduceTask.java:459)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:392)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:163)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:158)
+
+   map 100% reduce 100%
+  Job job_1738404752586_0035 completed successfully
+  Output directory: hdfs:///lab2/q3_2
+Counters: 52
+	File Input Format Counters 
+		Bytes Read=1028
+	File Output Format Counters 
+		Bytes Written=311
+	File System Counters
+		FILE: Number of bytes read=5749
+		FILE: Number of bytes written=364740
+		FILE: Number of large read operations=0
+		FILE: Number of read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=164
+		HDFS: Number of bytes written=311
+		HDFS: Number of large read operations=0
+		HDFS: Number of read operations=7
+		HDFS: Number of write operations=2
+	Job Counters 
+		Failed map tasks=3
+		Failed reduce tasks=2
+		Launched map tasks=5
+		Launched reduce tasks=3
+		Other local map tasks=3
+		Rack-local map tasks=2
+		Total megabyte-seconds taken by all map tasks=13207552
+		Total megabyte-seconds taken by all reduce tasks=16745472
+		Total time spent by all map tasks (ms)=12898
+		Total time spent by all maps in occupied slots (ms)=12898
+		Total time spent by all reduce tasks (ms)=16353
+		Total time spent by all reduces in occupied slots (ms)=16353
+		Total vcore-seconds taken by all map tasks=12898
+		Total vcore-seconds taken by all reduce tasks=16353
+	Map-Reduce Framework
+		CPU time spent (ms)=1690
+		Combine input records=0
+		Combine output records=0
+		Failed Shuffles=0
+		GC time elapsed (ms)=176
+		Input split bytes=164
+		Map input records=43
+		Map output bytes=4285
+		Map output materialized bytes=4727
+		Map output records=215
+		Merged Map outputs=2
+		Physical memory (bytes) snapshot=714166272
+		Reduce input groups=25
+		Reduce input records=215
+		Reduce output records=25
+		Reduce shuffle bytes=4727
+		Shuffled Maps =2
+		Spilled Records=430
+		Total committed heap usage (bytes)=513802240
+		Virtual memory (bytes) snapshot=5579390976
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+job output is in hdfs:///lab2/q3_2
+Removing HDFS temp directory hdfs:///user/hadoop/tmp/mrjob/mm_1step.hadoop.20250201.112224.695881...
+Removing temp directory /tmp/mm_1step.hadoop.20250201.112224.695881...
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ <span style="color:black;background-color:white;">hcat /lab2/q3_2/*</span><span style="color:white;background-color:black;">
+
+[0, 0]	11878
+[0, 1]	14044
+[0, 2]	16031
+[0, 3]	5964
+[0, 4]	15874
+[1, 0]	4081
+[1, 1]	6914
+[1, 2]	8282
+[1, 3]	7479
+[1, 4]	9647
+[2, 0]	6844
+[2, 1]	9880
+[2, 2]	10636
+[2, 3]	6973
+[2, 4]	8873
+[3, 0]	10512
+[3, 1]	12037
+[3, 2]	10587
+[3, 3]	2934
+[3, 4]	5274
+[4, 0]	11182
+[4, 1]	14591
+[4, 2]	10954
+[4, 3]	1660
+[4, 4]	9981
+(DS5102) </span><span style="font-weight:bold;color:lime;background-color:black;">hadoop@machine1</span>:<span style="font-weight:bold;color:#3333FF;">~/Lab2</span>$ exit
+
+exit
+
+Script done on 2025-02-01 17:00:03+05:30 [COMMAND_EXIT_CODE=&quot;0&quot;]
+</pre>
+</body>
+</html>
